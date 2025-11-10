@@ -5,7 +5,7 @@ import {
   onAuthStateChanged,
   type User,
 } from "firebase/auth";
-import { auth, googleProvider } from "./firebase";
+import { auth, googleProvider } from "../../../api/firebase";
 
 export const registerWithEmail = (email: string, password: string) =>
   createUserWithEmailAndPassword(auth, email, password);

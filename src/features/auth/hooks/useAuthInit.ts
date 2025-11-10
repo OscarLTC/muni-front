@@ -6,11 +6,8 @@ import { useAuthStore } from "@/store/auth";
 export const useAuthInit = () => {
   const { setUser, setLoading } = useAuthStore();
 
-  console.log("asd");
-
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      console.log(user);
       setUser(user);
       setLoading(false);
     });
