@@ -12,17 +12,18 @@ import { NavUser } from "./nav-user";
 import Logo from "@/assets/images/logo.svg";
 import { useAuthStore } from "@/store/auth";
 import { sidebarItems } from "@/router/sidebar";
+import { Link } from "react-router";
 
 export const AppSidebar = () => {
   const { user } = useAuthStore();
 
   return (
-    <Sidebar variant="inset">
+    <Sidebar variant="floating">
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton size="lg" asChild>
-              <a href="#">
+              <Link to="/">
                 <div className=" text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
                   <img
                     src={Logo}
@@ -36,7 +37,7 @@ export const AppSidebar = () => {
                   </span>
                   <span className="truncate text-xs">Administrador</span>
                 </div>
-              </a>
+              </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>
         </SidebarMenu>

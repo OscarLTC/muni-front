@@ -13,12 +13,23 @@ export const router = createBrowserRouter([
       </ProtectedRoute>
     ),
     children: [
-      { index: true, element: <Navigate to="/reclamos" replace /> },
-      { path: "reclamos", element: <div>Claims Page</div> },
-      { path: "areas", element: <div>Areas Page</div> },
-      { path: "usuarios", element: <div>Users Page</div> },
+      { index: true, element: <Navigate to="/complaints" replace /> },
+      {
+        path: "complaints",
+        element: <div>Complaints Page</div>,
+        handle: { breadcrumb: "Reclamos" },
+      },
+      {
+        path: "departments",
+        element: <div>Departments Page</div>,
+        handle: { breadcrumb: "Áreas" },
+      },
+      {
+        path: "users",
+        element: <div>Users Page</div>,
+        handle: { breadcrumb: "Usuarios" },
+      },
     ],
   },
-  // fallback
   { path: "*", element: <Navigate to="/" replace /> },
 ]);

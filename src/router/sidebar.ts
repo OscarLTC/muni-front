@@ -3,17 +3,17 @@ import { FileText, MapPin, Users } from "lucide-react";
 export const sidebarItems = [
   {
     title: "Reclamos",
-    url: "/reclamos",
+    url: "/complaints",
     icon: FileText,
   },
   {
     title: "Áreas",
-    url: "/areas",
+    url: "/departments",
     icon: MapPin,
   },
   {
     title: "Usuarios",
-    url: "/usuarios",
+    url: "/users",
     icon: Users,
   },
 ];
